@@ -1,9 +1,9 @@
-#Name: Nikolai Andrianov - Nathan Lowe, 
-#email: lowenc@mail.uc.edu
+#Name: Nikolai Andrianov - Nathan Lowe, Hugo Bourinbayar, Payton Cook, Jimmy Zimmer
+#email: lowenc@mail.uc.edu, bourinhh@mail.uc.edu, cookpk@mail.uc.edu, zimmejc@mail.uc.edu
 #Assignment Title: Assignment 10
 #Course: IS 4010
 #Semester/Year: Spring 2023
-#Brief Description: 
+#Brief Description: Utilizes a public API to extract data from a JSON
 #Citations: 
 #Anything else that's relevant:
 
