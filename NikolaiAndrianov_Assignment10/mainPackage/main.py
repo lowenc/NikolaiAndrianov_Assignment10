@@ -19,7 +19,7 @@ json_string = response.content                          #
     
 parsed_json = json.loads(json_string) # Now we have a python dictionary
 
-
+#Breaks the JSON into usable parts for printing text
 name = (parsed_json['location']['name'])
 region = (parsed_json['location']['region'])
 localTime = (parsed_json['location']['localtime'])
@@ -29,7 +29,7 @@ feelsLikeTemp = (parsed_json['current']['feelslike_f'])
 windSpeed = (parsed_json['current']['wind_mph'])
 windDirection = (parsed_json['current']['wind_dir'])
 
-
+#Prints the useful information pulled from the API in a readable format
 print(f'The weather for {name}, {region}. The Current time is {localTime[10:16]}') 
 print(f'The temperture outside is {temp}°F and it feels like {feelsLikeTemp}°F')
 print(f'The current condition is: {condition}')
