@@ -3,7 +3,7 @@
 #Assignment Title: Assignment 10
 #Course: IS 4010
 #Semester/Year: Spring 2023
-#Brief Description: Utilizes a public API to extract data from a JSON
+#Brief Description: Utilizes a public API to extract data from a JSON. This one is the Current weather of Cincinnati.
 #Citations: 
 #Anything else that's relevant:
 

@@ -3,8 +3,8 @@
 #Assignment Title: Assignment 10
 #Course: IS 4010
 #Semester/Year: Spring 2023
-#Brief Description: Utilizes a public API to extract data from a JSON 
-#Citations: 
+#Brief Description: Utilizes a public API to extract data from a JSON. This one is the Current weather of Cincinnati.
+#Citations: https://www.weatherapi.com/docs/
 #Anything else that's relevant:
 
 # main.py
@@ -14,20 +14,23 @@ import json
 from iterateOverADictionaryPackage.iterateOverADictionary import *
 
 # Make a request to a web server and store the results in response
-response = requests.get('https://developer.nps.gov/api/v1/parks?parkCode=acad,grsm&api_key=pfJKDXPzTykVL73ehnPyY8pkDQLjfq5cz5LqCkl3')
+response = requests.get('http://api.weatherapi.com/v1/current.json?key=76cb4cf35a8a41f8b3912556230404&q=Cincinnati&aqi=no')
 json_string = response.content                          #
     
 parsed_json = json.loads(json_string) # Now we have a python dictionary
-    
-#print(parsed_json)
-#print(parsed_json['data'][0]['description'])
-#print(parsed_json['data'][0]['directionsInfo'])
-    
-total = int(parsed_json['total'])        # The number of parks that were returned
-# I Just want the descriptions of the alerts
-for park in parsed_json['data']:
-    print (park['description'])
 
 
-#Invoke my function in the other module, pass it parsed_json
-#print(iterate_dictionary(parsed_json))
+name = (parsed_json['location']['name'])
+region = (parsed_json['location']['region'])
+localTime = (parsed_json['location']['localtime'])
+temp = (parsed_json['current']['temp_f'])
+condition = (parsed_json['current']['condition']['text'])
+feelsLikeTemp = (parsed_json['current']['feelslike_f'])
+windSpeed = (parsed_json['current']['wind_mph'])
+windDirection = (parsed_json['current']['wind_dir'])
+
+
+print(f'The weather for {name}, {region}. The Current time is {localTime[10:16]}') 
+print(f'The temperture outside is {temp}°F and it feels like {feelsLikeTemp}°F')
+print(f'The current condition is: {condition}')
+print(f'The current wind speed is: {windSpeed} MPH {windDirection}')
